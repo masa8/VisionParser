@@ -23,9 +23,10 @@ class TestImageDataExtractor:
     def mock_config(self):
         """Create a mock Config"""
         config = Mock()
-        config.model = "gpt-4o"
-        config.max_tokens = 2000
-        config.temperature = 0.0
+        config.openai = Mock()
+        config.openai.model = "gpt-4o"
+        config.openai.max_tokens = 2000
+        config.openai.temperature = 0.0
         return config
 
     @pytest.fixture

@@ -61,7 +61,7 @@ class ImageDataExtractor:
             base64_image = encode_image(image_path)
 
             response = self.client.chat.completions.create(
-                model=self.config.model,
+                model=self.config.openai.model,
                 messages=[
                     {
                         "role": "user",
@@ -95,8 +95,8 @@ Extract all rows. If no data is found, return an empty array.""",
                         ],
                     }
                 ],
-                max_tokens=self.config.max_tokens,
-                temperature=self.config.temperature,
+                max_tokens=self.config.openai.max_tokens,
+                temperature=self.config.openai.temperature,
             )
 
             content = response.choices[0].message.content.strip()
