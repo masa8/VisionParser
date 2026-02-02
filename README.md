@@ -16,7 +16,7 @@ This tool uses OpenAI's GPT-4 Vision API to extract structured data from images 
 ## 📁 Project Structure
 
 ```
-email_extract/
+VisionParser/
 ├── main.py                         # Main entry point
 ├── models/                         # Configuration models
 │   ├── __init__.py
@@ -404,7 +404,7 @@ Refer to [OpenAI Pricing](https://openai.com/pricing) for current rates.
 
 ## 📄 License
 
-This project is for educational and personal use.
+MIT
 
 ## 🤝 Contributing
 
